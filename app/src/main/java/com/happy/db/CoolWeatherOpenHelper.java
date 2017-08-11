@@ -1,4 +1,4 @@
-package com.happy.mycoolweather;
+package com.happy.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
