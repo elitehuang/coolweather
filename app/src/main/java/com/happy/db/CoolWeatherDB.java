@@ -54,7 +54,7 @@ public class CoolWeatherDB {
     }
 
     //Save City实例操作
-    public void saveProvince(City city){
+    public void saveCity(City city){
         ContentValues values = new ContentValues();
         values.put("city_name",city.getCityName());
         values.put("city_code",city.getCityCode());
@@ -63,7 +63,7 @@ public class CoolWeatherDB {
     }
 
     //Save County 实例操作
-    public void saveProvince(County county){
+    public void saveCounty(County county){
         ContentValues values = new ContentValues();
         values.put("county_name",county.getCountyName());
         values.put("county_code",county.getCountyCode());
@@ -76,7 +76,7 @@ public class CoolWeatherDB {
      */
     //加载Province 数据
     public List<Province> loadProvince(){
-        List<Province> provinces = new ArrayList<Province>();
+        List<Province> provinces = new ArrayList<>();
         Cursor cursor = db.query("Province", null, null, null, null, null, null);
         if(cursor.moveToFirst()){
            do{
@@ -94,7 +94,7 @@ public class CoolWeatherDB {
 
     //加载City 数据
     public List<City> loadCity(){
-        List<City> cities = new ArrayList<City>();
+        List<City> cities = new ArrayList<>();
         Cursor cursor = db.query("City", null, null, null, null, null, null);
         if(cursor.moveToFirst()){
            do{
@@ -113,7 +113,7 @@ public class CoolWeatherDB {
 
     //加载County 数据
     public List<County> loadCounty(){
-        List<County> counties= new ArrayList<County>();
+        List<County> counties= new ArrayList<>();
         Cursor cursor = db.query("City", null, null, null, null, null, null);
         if(cursor.moveToFirst()){
            do{
