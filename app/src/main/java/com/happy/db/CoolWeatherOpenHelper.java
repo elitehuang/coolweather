@@ -13,31 +13,34 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
     /*
     Province 表建表语句
+    */
 
-     */
     private static final String CREATE_PROVINCCE_TABLE="create table Province("
-            + "id integer primary key autoincrement"
-            + "province_name text"
+            + "id integer primary key autoincrement,"
+            + "province_name text,"
             + "province_code text"
             + ")";
+
     /*
     City 表建表语句
+    */
 
-     */
     private static final String CREATE_CITY_TABLE = "create table City("
-            + "id integer primary key autoincrement"
-            + "city_name text"
-            + "city_code text"
+            + "id integer primary key autoincrement,"
+            + "city_name text,"
+            + "city_code text,"
             + "province_id integer"
             + ")";
+
+
     /*
     County 表建表语句
-
      */
+
     private static final String CREATE_COUNTY_TABLE = "create table County("
-            + "id integer primary key autoincrement"
-            + "county_name text"
-            + "count_code text"
+            + "id integer primary key autoincrement,"
+            + "county_name text,"
+            + "count_code text,"
             + "city_id integer"
             + ")";
 
@@ -57,4 +60,6 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+
 }
